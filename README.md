@@ -1,14 +1,14 @@
-# Digital Scholarship Foundations Mapping Template
+# Template for Exploring Spatial Data and Building Interactive Maps
 
-Participants in Digital Scholarship Foundations Fall 2025 (and any adventurous digital scholarship practitioners who come across this repo) will fork this repository to advance through the workshop series.
+This template is a foundation for teaching others about spatial data, file types, and interactive mapping. After teaching about this in various settings, I decided to create a broader template that builds off of [Hands on DataViz](https://handsondataviz.org/). You can learn more about the original template below. If you are looking for more in-depth curriculum about version control, data wrangling, coding templates, web publishing, and more see the [Digital Scholarship Foundations Digital Mapping workshop series](https://puldischo.github.io/dsf-spring-2026/) I created as part of [Digital Scholarship Services](https://library.princeton.edu/services/digital-scholarship) at Princeton University Library.
 
-This is part 4 of a 4-part workshop series, in which participants will create their own leaflet map and use GitHub pages to publish that map.
+## About the Data in this Template
 
-## About Digital Scholarship Foundations: Digital Mapping
+The data is generated from objects from the [Messinesi Photographs Collection](https://collections.visualresources.princeton.edu/Detail/collections/SR-000072) which is part of the [Homer A. Thompson Collection](https://collections.visualresources.princeton.edu/Detail/collections/C-000008) house in [Visual Resources Collections](https://collections.visualresources.princeton.edu/) of Princeton University's Department of Art and Archaeology.
 
-Digital Scholarship Foundations is a series of library workshops led by Digital Scholarship Services (DiScho).
+After georeferencing the map in the Messinesi Photographs Collection, I used Google Earth to geolocate each red marker on the map. The red markers represent a photograph in the collection. I then transformed the resulting `google-earth-points.kml` file into `google-earth-points.geojson` and `google-earth-points.csv` using the platform [geojson.io](https://geojson.io/). While the Google Earth-generated kml file has additional data that may not be necessary for your mapping needs, especially after transformed into csv format, it is still a great way to explore spatial data and compare different file types.
 
-Our fall program is centered around digital mapping to develop fundamental skills necessary for a variety of digital projects. Participants will attend four workshops where they will learn about version control, data wrangling, coding templates, web publishing, and more as they transform research into spatial data and build their own interactive map.
+The `data.csv` file combines metadata from the Messinesi Photographs Collections and the extracted latitude and longitude coordinates from the `google-earth-points.kml` file to complete the dataset in order to allow users to build a map. If you follow along with the [Digital Scholarship Foundations Digital Mapping workshop series](https://puldischo.github.io/dsf-spring-2026/) your map will create a pop-up with some descriptive metadata and a photograph from the collection for each marker.
 
 # leaflet-map-csv
 Below is the information from [Hands on DataViz](https://handsondataviz.org/) on how to use the original tutorial that this repo is forked from.
